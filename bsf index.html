@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For My Best Friend 🤍</title>
+<style>
+body{
+  margin:0;
+  min-height:100vh;
+  background:
+    radial-gradient(circle at top, #ffd6e8 0%, #ffc1dc 40%, #ffb3d9 100%),
+    radial-gradient(#c2185b 1px, transparent 1px);
+  background-size:cover, 45px 45px;
+  background-position:center, 0 0;
+  font-family:'Segoe UI',sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+  color:#3a0030;
+}
+
+.box{
+  max-width:780px;
+  max-height:88vh;
+  overflow-y:auto;
+  background:#ffffffee;
+  border-radius:22px;
+  padding:28px;
+  text-align:center;
+  box-shadow:0 18px 45px rgba(0,0,0,.18);
+}
+
+.fade{
+  animation:fade 1s ease;
+}
+
+@keyframes fade{
+  from{opacity:0;transform:translateY(18px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+button{
+  padding:12px 26px;
+  margin:14px;
+  border:none;
+  border-radius:16px;
+  font-size:16px;
+  cursor:pointer;
+}
+
+.yes{
+  background:#ff4d88;
+  color:white;
+}
+
+.no{
+  background:#e0e0e0;
+  color:#333;
+  position:absolute;
+}
+
+.reason{
+  background:#ffe3ef;
+  padding:12px;
+  margin:8px 0;
+  border-radius:12px;
+  text-align:left;
+}
+
+.section-title{
+  margin-top:30px;
+  color:#b0004b;
+}
+
+.small{font-size:14px;color:#555;}
+</style>
+</head>
+<body>
+
+<div class="box fade" id="box">
+  <h2>Are you my best friend? 🤍</h2>
+  <button class="yes" onclick="bestYes()">YES</button>
+  <button class="no" id="noBtn" onclick="bestNo()">NO</button>
+</div>
+
+<script>
+const box=document.getElementById("box");
+const noBtn=document.getElementById("noBtn");
+
+function bestNo(){
+  noBtn.style.left=Math.random()*80+"vw";
+  noBtn.style.top=Math.random()*80+"vh";
+  box.innerHTML=`
+    <div class="fade">
+      <h3>Sahi h bete… dhokha dedo 🙂</h3>
+      <p class="small">Aadat si ho gayi hai.</p>
+      <p class="small">Par ek baar YES toh kar do.</p>
+      <button class="yes" onclick="bestYes()">YES</button>
+    </div>`;
+}
+
+function bestYes(){
+  box.innerHTML=`
+  <div class="fade">
+    <h3 class="section-title">Journey ✨</h3>
+    <p><b>10 June 2023 — The Accident That Changed Everything</b><br>
+    10 June 2023, raat 8:30 PM<br>
+    Tumhara pehla message aaya. Galti se tumhari story like kar di.<br>
+    Tumhara reply funny tha… Par woh ek like mere liye life-changing ban gaya.<br>
+    Tab nahi pata tha ki yeh shuruaat kahaan le jaayegi.</p>
+
+    <p><b>24 June 2023 — “Best Friend Banogi?”</b><br>
+    Shaam ko baat karte-karte tumne pucha — “Best friend banogi?” 🫠<br>
+    Aur maine jhoot bol diya ki mera boyfriend hai.<br>
+    Shayad darr tha, shayad confusion — par tum already important ho chuke the.</p>
+
+    <p><b>30 June 2023 — Zara</b><br>
+    Pata chala ki Zara tumhari best friend hai. Thoda ajeeb laga… par chup rehna seekh liya.</p>
+
+    <p><b>18 September 2023 — Your Birthday</b><br>
+    Tumhara birthday wish karna… aur sab kuch change ho gaya.<br>
+    Main genuinely khush thi. Itni si cheez itna impact karegi — socha nahi tha.</p>
+
+    <p><b>27 November 2023 — My Happiness</b><br>
+    Birthday wish karne ke baad khushi kaise feel hoti hai samajh nahi aaya.</p>
+
+    <p><b>January 2024 — Disappearing Act</b><br>
+    Tum achanak gayab ho gaye. Roz message karti, confusion hi milta.</p>
+
+    <p><b>1 December 2024 — 4:59 PM Message</b><br>
+    Ek message ne sab feelings bahar la di, main ro padi.</p>
+
+    <p><b>13 March 2025 — Jealousy</b><br>
+    Tumhe Aisha ke saath dekh ke jealous feel hui.</p>
+
+    <p><b>14 March 2025 — The “Love You”</b><br>
+    Faltu ka love you bol diya. Feelings heavy ho gayi.</p>
+
+    <p><b>Noida & Saiyaara Movie</b><br>
+    Call kiya, movie plan, farmhouse, massage, gaming… sab cancel hua.</p>
+
+    <p><b>October 2025 — The Hamper</b><br>
+    Jaguar perfume, BMW M4 scalar model, handmade cards, frame… Tum Noida chale gaye, gift jalana pada.</p>
+
+    <p><b>14 November 2025 — Children’s Day</b><br>
+    Zepto order, pamper karna, par phir bhi rula diya.</p>
+
+    <p><b>27 November 2025 — Almost Blocking</b><br>
+    Socha block karungi, par nahi kiya.</p>
+
+    <p><b>1 January 2026 — The End</b><br>
+    Tumne mujhe block kar diya, uske baad sab yaad hai.</p>
+
+    <button class="yes" onclick="reasons()">Next</button>
+  </div>`;
+}
+
+function reasons(){
+const reasons=[
+"Kyunki tum hamesha real rahe ho, kabhi fake nahi.",
+"Tumhari silence bhi bolti hai aur main samajh jaati hoon.",
+"Tum jab baat kam karte ho, tab bhi presence feel hoti hai.",
+"Tumhari honesty, chahe kadwi ho, par clean hoti hai.",
+"Tumhari respect khud ke liye bhi, aur doosron ke liye bhi.",
+"Tumhara self-control, jo har kisi me nahi hota.",
+"Tumhara calm rehna, jab sab kuch messy hota hai.",
+"Tumhara focused rehna, chahe life me kuch bhi chal raha ho.",
+"Tumhara kabhi attention ke liye drama na karna.",
+"Tumhara care karna bina dikhaye.",
+"Tum strong ho, par softness chhupate ho  aur wahi tumhari strength hai.",
+"Tum kabhi apni problems ko sympathy ke liye use nahi karte.",
+"Tum mehnat ko show off nahi, silently carry karte ho.",
+"Tumhara pain tumhe bitter nahi banata.",
+"Tumhara patience, jo har situation me dikhta hai.",
+"Tumhara protective nature bina possessive bane.",
+"Tumhara responsibility lena, chahe koi dekhe ya nahi.",
+"Tumhara khud pe kaam karna, roz thoda thoda better banna.",
+"Tumhara apni boundaries samajhna.",
+"Tumhara trust build karna, dheere par strong.",
+"Tumhara smile karna kam, par jab karte ho toh pure dil se.",
+"Tumhara confidence jo shor nahi karta.",
+"Tumhara consistency  chahe log badal jaayein.",
+"Tumhara kisi ko neecha dikhaye bina strong rehna.",
+"Tumhara apni feelings ko samajhne ka tareeqa.",
+"Tumhara har situation me dignity maintain karna.",
+"Tumhara apne aap se loyal rehna.",
+"Tumhara kabhi victim play na karna.",
+"Tumhara grow karna  sirf body se nahi, dimaag se bhi.",
+"Aur sabse important  tumhara tum jaisa rehna."
+];
+
+box.innerHTML=`<h3 class="section-title fade">🌸 30 Reasons – Why I Love You</h3><div id="list"></div>
+<button class="yes" onclick="neverSaid()">Next</button>`;
+
+let list=document.getElementById("list");
+let i=0;
+let interval=setInterval(()=>{
+ if(i>=reasons.length){clearInterval(interval);return;}
+ let div=document.createElement("div");
+ div.className="reason";
+ div.innerText=(i+1)+". "+reasons[i];
+ list.appendChild(div);
+ i++;
+},140);
+}
+
+function neverSaid(){
+box.innerHTML=`
+<div class="fade">
+<h3 class="section-title">🌙 Things I Never Said</h3>
+<p>
+Kabhi directly nahi bola,<br>
+shayad isliye kyunki kuch baatein bol dene se chhoti ho jaati hain.<br><br>
+Main hamesha strong dikhne ki koshish karti rahi,<br>
+par sach yeh hai ki kai baar<br>
+tumhari ek normal si presence bhi<br>
+mujhe theek mehsoos karwa deti thi.<br><br>
+Tumne kabhi extra effort dikhaya nahi,<br>
+par tumhara hona hi kaafi tha.<br><br>
+Aur shayad tumhe idea bhi nahi hai<br>
+ki bina bole bhi tumne<br>
+kitni baar mujhe sambhala hai.
+</p>
+<button class="yes" onclick="moments()">Next</button>
+</div>`;
+}
+
+function moments(){
+box.innerHTML=`
+<div class="fade">
+<h3 class="section-title">🌙 Moments I Still Remember</h3>
+<p>
+10 June 2023 — Gym wali story.<br>
+Bas ek like.<br>
+Aur wahi se sab quietly start ho gaya.<br><br>
+24 June — “Best friend” word official hua.<br>
+Simple tha, dramatic nahi. Par real tha.<br>
+Woh late replies. Woh sudden silence.<br>
+Bina explanation ke samajh jaana.<br>
+Kuch moments loud nahi hote, par woh dimaag me nahi — dil me reh jaate hain.
+</p>
+<button class="yes" onclick="taught()">Next</button>
+</div>`;
+}
+
+function taught(){
+box.innerHTML=`
+<div class="fade">
+<h3 class="section-title">🌙 What You Taught Me</h3>
+<p>
+Tumne mujhe yeh sikhaya ki har cheez prove karna zaroori nahi hota.<br>
+Ki strong hone ka matlab har waqt bolte rehna nahi hota.<br>
+Ki boundaries rakhna selfish hona nahi hota.<br>
+Aur agar koi sach me strong hai, toh woh shor nahi karta.<br>
+Tumhari calmness, tumhara self-control, tumhara focus — yeh sab bina bole bhi bahut kuch sikha gaye.
+</p>
+<button class="yes" onclick="seeYou()">Next</button>
+</div>`;
+}
+
+function seeYou(){
+box.innerHTML=`
+<div class="fade">
+<h3 class="section-title">🌙 The Way I See You</h3>
+<p>
+Main tumhe sirf surface se nahi dekhti.<br>
+Tumhari smile jab aati hai toh genuine hoti hai.<br>
+Rare hai, isliye special lagti hai.<br>
+Tumhari aankhen bahut kuch chhupa ke rakhti hain,<br>
+aur shayad isliye bahut kuch keh bhi jaati hain.<br>
+Tumhari strength sirf physical nahi hai.<br>
+Tumhara silence weak nahi — balanced hai.<br>
+Agar “tough man” ka matlab emotionless hona nahi, balancing strength aur softness hai — toh tum us definition ke kaafi kareeb ho.
+</p>
+<button class="yes" onclick="strong()">Next</button>
+</div>`;
+}
+
+function strong(){
+box.innerHTML=`
+<div class="fade">
+<h3 class="section-title">🌙 I Wanna See You Strong</h3>
+<p>
+Mujhe pata hai tum sab share nahi karte.<br>
+Mujhe yeh bhi pata hai ki tum apni fights khud ladte ho.<br>
+Main yeh nahi chahti ki tum har waqt perfect raho.<br>
+Bas itna chahti hoon ki jab life heavy lage, toh tum khud pe doubt na karo.<br>
+Tum strong ho.<br>
+Aur tumhe yaad dilane ke liye kisi dramatic moment ki zarurat nahi honi chahiye.
+</p>
+<button class="yes" onclick="final()">Final</button>
+</div>`;
+}
+
+function final(){
+box.innerHTML=`
+<div class="fade">
+<h2>🌙 Thank You for Being My Best Friend 🤍</h2>
+<p>
+Yeh page kisi expectation ke liye nahi hai.<br>
+Na pressure, na demands.<br>
+Bas ek thank you — samajhne ke liye, bina bole support karne ke liye, aur best friend hone ke liye.<br>
+Tumhari jagah meri life me kabhi confusing nahi rahi. Hamesha clear thi. Aur rahegi.
+</p>
+</div>`;
+}
+</script>
+</body>
+</html>
